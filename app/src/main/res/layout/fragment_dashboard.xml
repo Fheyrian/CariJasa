@@ -6,36 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".ui.dashboard.DashboardFragment">
 
-    <LinearLayout
-        android:id="@+id/bookmark_bar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+
+
+    <TextView
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="#53A8B6">
-
-        <ImageButton
-            android:background="#"
-            android:layout_margin="10dp"
-            android:id="@+id/back_button"
-            android:layout_width="39dp"
-            android:layout_height="26dp"
-            android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
-            tools:layout_editor_absoluteX="48dp"
-            tools:layout_editor_absoluteY="28dp" />
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:id="@+id/dash_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Bookmark"
-            android:textStyle="bold"
-            android:textColor="#FFFFFF"
-            android:textSize="22sp"
-    </LinearLayout>
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/dash_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="Bookmark"
+        android:textColor="#53A8B6"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="154dp"
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/text_dashboard"
@@ -56,10 +44,10 @@
     <SearchView
         android:queryHint="Search Bookmark"
         android:iconifiedByDefault="false"
-        app:layout_constraintTop_toBottomOf="@+id/bookmark_bar"
+        app:layout_constraintTop_toBottomOf="@+id/dash_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:id="@+id/dashboard_search"
         android:layout_width="314dp"
         android:layout_height="47dp"
