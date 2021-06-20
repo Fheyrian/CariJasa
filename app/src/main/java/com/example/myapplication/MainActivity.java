@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        button = (Button) findViewById(R.id.btn_laptop);
+        button = (Button) findViewById(R.id.locate);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,11 +50,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+<<<<<<< HEAD
                 openHp();
             }
         });
     }
     private void openHp() {
+=======
+                openDetail();
+            }
+        });
+    }
+
+    private void openDetail() {
+>>>>>>> 8cd5644a3f484a81a35c5a626e07cd6b52dba3dc
         Intent intent = new Intent(this, Detail.class);
         startActivity(intent);
     }
