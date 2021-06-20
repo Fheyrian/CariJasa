@@ -5,17 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
-public class Detail extends AppCompatActivity {
+public class DetailLaptop extends AppCompatActivity {
 
     private ImageButton imageButton;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_detail);
+        setContentView(R.layout.activity_detail_laptop);
 
         imageButton = (ImageButton) findViewById(R.id.back_button);
         imageButton.setOnClickListener(new View.OnClickListener() {
@@ -24,7 +22,6 @@ public class Detail extends AppCompatActivity {
                 backHome();
             }
         });
-        
     }
 
     private void backHome() {
