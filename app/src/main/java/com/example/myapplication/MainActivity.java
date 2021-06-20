@@ -42,6 +42,13 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                openMap();
+            }
+        });
+        button = (Button) findViewById(R.id.btn_laptop);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
                 openLaptop();
             }
         });
@@ -50,26 +57,22 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD
                 openHp();
             }
         });
     }
     private void openHp() {
-=======
-                openDetail();
-            }
-        });
-    }
-
-    private void openDetail() {
->>>>>>> 8cd5644a3f484a81a35c5a626e07cd6b52dba3dc
         Intent intent = new Intent(this, Detail.class);
         startActivity(intent);
     }
 
     private void openLaptop() {
         Intent intent = new Intent(this, DetailLaptop.class);
+        startActivity(intent);
+    }
+
+    private void openMap(){
+        Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
 
