@@ -82,7 +82,7 @@
         app:layout_constraintTop_toBottomOf="@id/divider3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:text="Kategori Service"
+        android:text="@string/kategori_service"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="20sp"
@@ -103,7 +103,7 @@
             android:layout_margin="16dp"
             android:drawableTop="@drawable/laptop"
             android:backgroundTint="@color/white"
-            android:text="Service Laptop"
+            android:text="@string/service_laptop"
             android:layout_weight="1"
             android:textColor="@color/black"
             android:textAllCaps="false" />
@@ -115,7 +115,7 @@
             android:layout_margin="16dp"
             android:drawableTop="@drawable/smartphone"
             android:backgroundTint="@color/white"
-            android:text="Service Phone"
+            android:text="@string/service_phone"
             android:layout_weight="1"
             android:textColor="@color/black"
             android:textAllCaps="false" />

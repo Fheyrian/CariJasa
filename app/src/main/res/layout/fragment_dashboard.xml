@@ -16,7 +16,7 @@
         android:background="#53A8B6">
 
         <ImageButton
-            android:background="#"
+            android:background="#53A8B6"
             android:layout_margin="10dp"
             android:id="@+id/back_button"
             android:layout_width="39dp"
@@ -34,7 +34,7 @@
             android:text="Bookmark"
             android:textStyle="bold"
             android:textColor="#FFFFFF"
-            android:textSize="22sp"
+            android:textSize="22sp"/>
     </LinearLayout>
 
     <TextView
