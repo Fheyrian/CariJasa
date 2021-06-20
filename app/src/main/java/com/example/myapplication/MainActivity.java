@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMap();
+                openLaptop();
             }
         });
 
@@ -50,23 +50,17 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMap();
-            }
-        });
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openDetail();
+                openHp();
             }
         });
     }
-    private void openDetail() {
+    private void openHp() {
         Intent intent = new Intent(this, Detail.class);
         startActivity(intent);
     }
 
-    private void openMap() {
-        Intent intent = new Intent(this, MapsActivity.class);
+    private void openLaptop() {
+        Intent intent = new Intent(this, DetailLaptop.class);
         startActivity(intent);
     }
 
