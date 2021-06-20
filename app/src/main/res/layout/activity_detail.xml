@@ -4,33 +4,50 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.notifications.Detail">
+    tools:context=".Detail"
+    >
+
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="sinarcahayaservice@gmail.com"
+        android:text="sinarcahayaserice@gmail.com"
         android:textColor="@android:color/black"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="690dp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.977"
+        tools:text="sinarcahayaserice@gmail.com" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="?attr/homeAsUpIndicator"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp" />
+        tools:ignore="ContentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="?attr/homeAsUpIndicator" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="130dp"
         android:layout_height="130dp"
+        tools:ignore="ContentDescription"
         android:src="@drawable/detail"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="87dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.117"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123" />
 
     <TextView
         android:id="@+id/textView"
@@ -39,8 +56,13 @@
         android:text="Sinar Cahaya Service"
         android:textColor="@color/black"
         android:textSize="20sp"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="100dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.757"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.139"
+        tools:text="Sinar Cahaya Service" />
 
     <TextView
         android:id="@+id/textView2"
@@ -48,48 +70,76 @@
         android:layout_height="wrap_content"
         android:text="Service : Phone (Android/IOS)"
         android:textSize="12sp"
-        tools:layout_editor_absoluteX="164dp"
-        tools:layout_editor_absoluteY="138dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.678"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.19"
+        tools:text="Service : Phone (Android/IOS)" />
+
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="150dp"
         android:layout_height="87dp"
-        app:srcCompat="@drawable/service1"
-        tools:layout_editor_absoluteX="51dp"
-        tools:layout_editor_absoluteY="266dp" />
-
+        tools:ignore="ContentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/service1" />
 
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="150dp"
         android:layout_height="87dp"
-        app:srcCompat="@drawable/service2"
-        tools:layout_editor_absoluteX="215dp"
-        tools:layout_editor_absoluteY="266dp" />
+        tools:ignore="ContentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.823"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.413"
+        app:srcCompat="@drawable/service2" />
 
     <View
+        android:id="@+id/view4"
         android:layout_width="370dp"
         android:layout_height="3dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="20dp"
-        tools:layout_editor_absoluteY="235dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.321" />
 
     <View
-        android:id="@+id/view"
+        android:id="@+id/viewL"
         android:layout_width="120dp"
         android:layout_height="3dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539" />
 
     <View
         android:id="@+id/view2"
         android:layout_width="125dp"
         android:layout_height="3dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="391dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.539" />
 
     <TextView
         android:id="@+id/textView3"
@@ -97,9 +147,13 @@
         android:layout_height="wrap_content"
         android:text="Deskripsi"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="169dp"
-        tools:layout_editor_absoluteY="381dp" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.54"
+        tools:text="Deskripsi" />
 
     <TextView
         android:id="@+id/textView4"
@@ -107,25 +161,38 @@
         android:layout_height="wrap_content"
         android:text="Kontak"
         android:textColor="@color/black"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="177dp"
-        tools:layout_editor_absoluteY="568dp" />
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.799"
+        tools:text="Kontak" />
 
     <View
         android:id="@+id/view"
         android:layout_width="120dp"
         android:layout_height="3dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="578dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="125dp"
         android:layout_height="3dp"
         android:background="?android:attr/listDivider"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="578dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.898"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.793" />
 
     <TextView
         android:id="@+id/textView5"
@@ -135,33 +202,39 @@
         android:textAlignment="textStart"
         android:textColor="@color/black"
         android:textSize="12sp"
-        app:lineHeight="1,5"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="428dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.56"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.696"
+        tools:text="Sinar Cahaya Service merupakan tempat yang menyediakan layanan service untuk mobilephone, baik android maupun IOS. Layanan kami memberikan kualitas yang baik dan harga yang terjangkau. Kami juga memberikan garansi yang disesuaikan. \nSinar Cahaya Service merupakan tempat yang menyediakan layanan service untuk mobilephone, baik android maupun IOS. Layanan kami memberikan kualitas yang baik dan harga yang terjangkau. Kami juga memberikan garansi yang disesuaikan. " />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="20dp"
         android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.848"
         app:srcCompat="@drawable/loc"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="607dp" />
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="27dp"
         android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
         app:srcCompat="@drawable/email"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="685dp" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        app:srcCompat="@drawable/wa"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="648dp" />
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView6"
@@ -169,9 +242,14 @@
         android:layout_height="wrap_content"
         android:text="Jalan Sukajaya II No 17A Rt 003 Rw 07, Kelurahan Jelambar, Kecamatan Grogol Petamburan, Jakarta Barat, 11460"
         android:textColor="@android:color/black"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="607dp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.879"
+        tools:text="Jalan Sukajaya II No 17A Rt 003 Rw 07, Kelurahan Jelambar, Kecamatan Grogol Petamburan, Jakarta Barat, 11460" />
 
     <TextView
         android:id="@+id/textView7"
@@ -179,16 +257,39 @@
         android:layout_height="wrap_content"
         android:text="089655776743"
         android:textColor="@android:color/black"
-        android:textSize="10sp"
-        tools:layout_editor_absoluteX="75dp"
-        tools:layout_editor_absoluteY="654dp" />
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.675"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93"
+        tools:text="089655776743" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintVertical_bias="0.928"
+        app:srcCompat="@drawable/wa"
+        tools:ignore="ContentDescription" />
 
     <ImageButton
         android:id="@+id/imageButton2"
         android:layout_width="20dp"
         android:layout_height="30dp"
-        app:srcCompat="@drawable/bookmark"
-        tools:layout_editor_absoluteX="365dp"
-        tools:layout_editor_absoluteY="29dp" />
+        tools:ignore="ContentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.041"
+        app:srcCompat="@drawable/bookmark" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

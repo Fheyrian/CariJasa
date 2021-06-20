@@ -1,4 +1,4 @@
-package com.example.myapplication.ui.notifications;
+package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
