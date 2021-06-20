@@ -53,6 +53,16 @@ public class MainActivity extends AppCompatActivity {
                 openMap();
             }
         });
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDetail();
+            }
+        });
+    }
+    private void openDetail() {
+        Intent intent = new Intent(this, Detail.class);
+        startActivity(intent);
     }
 
     private void openMap() {
