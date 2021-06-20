@@ -6,5 +6,8 @@
     <string name="search">Search</string>
     <string name="todo">TODO</string>
     <string name="title_activity_maps">Map</string>
+    <string name="kategori_service">Kategori Service</string>
+    <string name="service_laptop">Service Laptop</string>
+    <string name="service_phone">Service Phone</string>
 
 </resources>
