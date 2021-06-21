@@ -27,20 +27,20 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <SearchView
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:id="@+id/sv_location"
-            android:queryHint="Search"
-            android:iconifiedByDefault="false"
-            android:layout_margin="10dp"
-            android:elevation="5dp"
-            android:background="@drawable/bg_round"/>
+<!--        <SearchView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="20dp"-->
+<!--            android:id="@+id/sv_location"-->
+<!--            android:queryHint="Search"-->
+<!--            android:iconifiedByDefault="false"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:elevation="5dp"-->
+<!--            android:background="@drawable/bg_round"/>-->
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Testing"
+            android:text="@string/search"
             android:id="@+id/btTesting"/>
 
     </LinearLayout>

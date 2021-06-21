@@ -34,7 +34,7 @@ public class Search extends FragmentActivity implements OnMapReadyCallback {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
 
-        searchView = findViewById(R.id.sv_location);
+//        searchView = findViewById(R.id.sv_location);
 //        btTesting = findViewById( R.id.btTesting );
         mapFragment = (SupportMapFragment) getSupportFragmentManager()
             .findFragmentById(R.id.google_map);
