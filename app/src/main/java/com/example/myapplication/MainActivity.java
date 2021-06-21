@@ -38,11 +38,18 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-        button = (Button) findViewById(R.id.btn_laptop);
+        button = (Button) findViewById(R.id.locate);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openMap();
+            }
+        });
+        button = (Button) findViewById(R.id.btn_laptop);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLaptop();
             }
         });
 
@@ -50,12 +57,21 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openMap();
+                openHp();
             }
         });
     }
+    private void openHp() {
+        Intent intent = new Intent(this, Detail.class);
+        startActivity(intent);
+    }
 
-    private void openMap() {
+    private void openLaptop() {
+        Intent intent = new Intent(this, DetailLaptop.class);
+        startActivity(intent);
+    }
+
+    private void openMap(){
         Intent intent = new Intent(this, MapsActivity.class);
         startActivity(intent);
     }
