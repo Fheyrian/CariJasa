@@ -1,12 +1,18 @@
 package com.example.myapplication;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
@@ -20,6 +26,14 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.libraries.places.api.Places;
+import com.google.android.libraries.places.api.model.Place;
+import com.google.android.libraries.places.widget.Autocomplete;
+import com.google.android.libraries.places.widget.model.AutocompleteActivityMode;
+import com.google.gson.Gson;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -28,6 +42,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final int REQUEST_CODE = 101;
 
     private GoogleMap mMap;
+    SupportMapFragment mapFragment;
+    SearchView searchView;
+    private Button btTesting;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +55,70 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //                .findFragmentById(R.id.map);
 //        mapFragment.getMapAsync(this);
 
+        Places.initialize(getApplicationContext(), getString(R.string.google_maps_key));
+        initComponents();
+        initListeners();
+
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         fetchLastLocation();
+
+//        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+//            @Override
+//            public boolean onQueryTextSubmit(String s) {
+//                String location = searchView.getQuery().toString();
+//                List<Address> addressList = null;
+//
+//                if (location != null || !location.equals("")){
+//                    Geocoder geocoder = new Geocoder(MapsActivity.this);
+//                    try {
+//                        addressList = geocoder.getFromLocationName(location, 1);
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    Address address = addressList.get(0);
+//                    LatLng latLng = new LatLng(address.getLatitude(),address.getLongitude());
+//                    mMap.addMarker(new MarkerOptions().position(latLng).title(location));
+//                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 10));
+//                }
+//                return false;
+//            }
+//
+//            @Override
+//            public boolean onQueryTextChange(String s) {
+//                return false;
+//            }
+//        });
+
+//        mapFragment.getMapAsync(this);
+    }
+
+    private void initComponents(){
+        btTesting = findViewById( R.id.btTesting );
+    }
+
+    private void initListeners(){
+        btTesting.setOnClickListener( new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d( "logging" , "btTesting clicked");
+                List<Place.Field> fields = Arrays.asList(Place.Field.ID, Place.Field.NAME);
+                Intent intent = new Autocomplete.IntentBuilder( AutocompleteActivityMode.FULLSCREEN, fields)
+                        .build(MapsActivity.this);
+                startActivityForResult(intent, 1);
+            }
+        } );
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult( requestCode, resultCode, data );
+        if(requestCode==1){
+            if(resultCode==RESULT_OK){
+                Gson json = new Gson();
+                String result = json.toJson( data );
+                Log.d( "logging" ,result);
+            }
+        }
     }
 
     private void fetchLastLocation() {
@@ -67,11 +146,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
 //        mMap = googleMap;
-//
-//        // Add a marker in Sydney and move the camera
-//        LatLng sydney = new LatLng(-34, 151);
-//        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
-//        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
+//        Log.d( "logging",currentLocation.getLatitude()+"" );
         LatLng latLng = new LatLng(currentLocation.getLatitude(), currentLocation.getLongitude());
         MarkerOptions markerOptions = new MarkerOptions().position(latLng)
                 .title("You're here");
